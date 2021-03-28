@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Example Experiment</title>
+        <script src="jspsych-6.3.0/jspsych.js"></script>
+        <script src="jspsych-6.3.0/plugins/jspsych-html-keyboard-response.js"></script>
+        <script src="jspsych-6.3.0/plugins/jspsych-image-keyboard-response.js"></script>
+        <link href="jspsych-6.3.0/css/jspsych.css" rel="stylesheet" type="text/css">
+    </head>
+    <body></body>
+    <script>
+
+    var text_trial = {
+        type: 'html-keyboard-response',
+        stimulus: 'You will see an image. Pay attention.',
+        trial_duration: 3000,
+    }
+
+    var image_trial = {
+        type: 'image-keyboard-response',
+        stimulus: 'image/happyface.jpeg',
+        trial_duration: 3000,
+        post_trial_gap: 2000
+    }
+
+    jsPsych.init({
+        timeline: [text_trial, image_trial]
+    })
+
+    </script>
+
+</html>
