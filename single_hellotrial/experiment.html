@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Example Experiment</title>
+        <script src="jspsych-6.3.0/jspsych.js"></script>   # to import jspsych library
+        <script src="jspsych-6.3.0/plugins/jspsych-html-keyboard-response.js"></script>  # to use the plugin
+        <link href="jspsych-6.3.0/css/jspsych.css" rel="stylesheet" type="text/css"> # to import jspsych stylesheet
+    </head>
+    <body></body>
+    <script>
+
+    var hello_trial = {
+        type: 'html-keyboard-response',
+        stimulus: 'Hello world!'
+    }
+
+    jsPsych.init({
+        timeline: [hello_trial]
+    })
+
+    </script>
+
+</html>
